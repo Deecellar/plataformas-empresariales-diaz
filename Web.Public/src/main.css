@@ -1,0 +1,18 @@
+/* src/main.css */
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/*
+Here are generic styles for diferent components
+*/
+.text-input
+{
+  @apply m-2;
+  @apply p-2;
+  @apply  h-8;
+  @apply rounded-md;
+}

@@ -1,0 +1,49 @@
+{
+  "author": "Dan Ellis Echavarria",
+  "classifications": ["WebApi","Asp.Net","Auth","DDD","CMS","Ecommerce"],
+  "description": "A lut of stuff, CMS, Files, DDD, CQRS, OpenID, Auth, All just ther to make use of things to do, ",
+  "name": "Clean Architecture WebAPI",
+  "defaultName": "LongLongApi.Template",
+  "identity": "LongLongApi.Template.CSharp",
+  "groupIdentity": "LongLongApi.Template",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "shortName": "LongLongApi.Template",
+  "sourceName": "LongLongApi.Template",
+  "guids": [],
+  "primaryOutputs": [
+    {
+      "path": "WebApi\\WebApi.csproj"
+    },
+    {
+      "path": "Domain\\Domain.csproj"
+    },
+    {
+      "path": "Domain\\Domain.CMS.csproj"
+    },
+    {
+      "path": "Infrastructure.Shared\\Infrastructure.Shared.csproj"
+    },
+    {
+      "path": "Infrastructure.Persistence\\Infrastructure.Persistence.csproj"
+    },
+    {
+      "path": "Application\\Application.csproj"
+    },
+    {
+      "path": "Application\\Application.CMS.csproj"
+    },
+    
+    {
+      "path": "Infrastructure.Identity\\Infrastructure.Identity.csproj"
+    },
+    {
+      "path": "Infrastructure.Identity.OpenId\\Infrastructure.Identity.OpenId.csproj"
+    },
+    {
+      "path": "Infrastructure.CMS\\Infrastructure.CMS.csproj"
+    }
+  ]
+}

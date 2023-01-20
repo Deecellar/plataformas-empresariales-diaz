@@ -1,0 +1,4 @@
+{
+    "msbuildProjectTools.nuget.includePreRelease": true,
+    "cSpell.enabled": false
+}
