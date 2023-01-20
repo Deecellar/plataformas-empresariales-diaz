@@ -1,6 +1,5 @@
  # ASP.NET Core WebApi + Svelte - Clean Architecture
- ![Azure Static Web Apps CI/CD](https://github.com/LongLongDragonTeam/LongLongDragonWebAppTemplate/workflows/Azure%20Static%20Web%20Apps%20CI/CD/badge.svg?branch=senpai)
- 
+
 Implementation of onion architecture using ASP.NET Core and Svelte, it's database independent but right now we are constrained by SQLKata and FluentMigrator implementation, but as long we can use dapper, we can create more database backends, we are using MVC for the web projects
 
 ## Technologies
