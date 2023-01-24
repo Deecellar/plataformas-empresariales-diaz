@@ -1,28 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Version>1.1.0</Version>
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Migrations\20200627124316_Updates.cs"/>
-    <Compile Remove="Migrations\20200627124316_Updates.Designer.cs"/>
-    <Compile Remove="Migrations\20200724180907_New.cs"/>
-    <Compile Remove="Migrations\20200724180907_New.Designer.cs"/>
+    <Compile Remove="Migrations\20200627124316_Updates.cs" />
+    <Compile Remove="Migrations\20200627124316_Updates.Designer.cs" />
+    <Compile Remove="Migrations\20200724180907_New.cs" />
+    <Compile Remove="Migrations\20200724180907_New.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Application\Application.csproj"/>
-    <ProjectReference Include="..\Domain\Domain.csproj"/>
-    <ProjectReference Include="..\Infrastructure.Shared\Infrastructure.Shared.csproj"/>
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Infrastructure.Shared\Infrastructure.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="7.5.0"/>
-    <PackageReference Include="FluentMigrator" Version="3.2.9"/>
-    <PackageReference Include="Microsoft.Data.Sqlite" Version="3.1.9"/>
-    <PackageReference Include="MySqlConnector" Version="0.69.9"/>
-    <PackageReference Include="Npgsql" Version="4.1.5"/>
-    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.90"/>
-    <PackageReference Include="SqlKata.Execution" Version="2.2.0"/>
-    <PackageReference Include="Twilio" Version="5.47.0"/>
+    <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="9.1.1" />
+    <PackageReference Include="FluentMigrator" Version="3.3.2" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.2" />
+    <PackageReference Include="MySqlConnector" Version="2.2.5" />
+    <PackageReference Include="Npgsql" Version="7.0.1" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.90" />
+    <PackageReference Include="SqlKata.Execution" Version="3.2.3" />
+    <PackageReference Include="Twilio" Version="6.2.1" />
   </ItemGroup>
 </Project>

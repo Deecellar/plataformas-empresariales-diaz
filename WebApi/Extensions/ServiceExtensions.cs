@@ -92,9 +92,8 @@ namespace WebApi.Extensions
         public static void AddHealth(this IHealthChecksBuilder healthChecks, IConfiguration configuration, ConnectionType connection)
         {
             healthChecks.AddPingHealthCheck(x => x.AddHost(configuration.GetSection("PingHealth").GetValue<string>("Host"), configuration.GetSection("Health").GetValue<int>("TimeOut")))
-                        .AddAzureBlobStorage($"DefaultEndpointsProtocol=https;AccountName={configuration.GetSection("Azure")["BlobStorageAccount"]};AccountKey={configuration.GetSection("Azure")["BlobStorageKey"]}")
                         .AddHealthDatabase(configuration, connection)
-                        .AddDiskStorageHealthCheck(x => x.AddDrive(DriveInfo.GetDrives().First().Name, 120));
+                        .AddDiskStorageHealthCheck(x => x.AddDrive(DriveInfo.GetDrives().Where(x => x.Name == "/").First().Name, 120));
         }
 
         public static IHealthChecksBuilder AddHealthDatabase(this IHealthChecksBuilder healthChecks, IConfiguration configuration, ConnectionType type)
@@ -130,15 +129,19 @@ namespace WebApi.Extensions
                     break;
                 case ConnectionType.Sqlite:
                     services.AddHealthChecksUI()
-            .AddSqliteStorage(configuration.GetConnectionString("HealthDatabase"));
+                            .AddSqliteStorage(configuration.GetConnectionString("HealthDatabase"));
                     break;
                 case ConnectionType.MySql:
                     services.AddHealthChecksUI()
-            .AddMySqlStorage(configuration.GetConnectionString("HealthDatabase"));
+                            .AddMySqlStorage(configuration.GetConnectionString("HealthDatabase"));
                     break;
                 case ConnectionType.PostgresSql:
                     services.AddHealthChecksUI()
-            .AddPostgreSqlStorage(configuration.GetConnectionString("HealthDatabase"));
+                            .AddPostgreSqlStorage(configuration.GetConnectionString("HealthDatabase"));
+                    break;
+                default:
+                    services.AddHealthChecksUI()
+                            .AddInMemoryStorage();
                     break;
             }
 

@@ -1,13 +1,20 @@
+using System;
 using System.ComponentModel;
+using System.Linq;
+using System.Net.Mime;
 using Application;
 using Application.Interfaces;
+using HealthChecks.UI.Client;
 using Infrastructure.Identity;
 using Infrastructure.Persistence;
 using Infrastructure.Shared;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using WebApi.Extensions;
 using WebApi.Services;
@@ -33,8 +40,8 @@ namespace WebApi
             services.AddCORS(Config);
             services.AddControllers();
             services.AddApiVersioningExtension();
-            services.AddHealthChecks();
             services.AddHealthUI(Config, type);
+            WebApi.Extensions.ServiceExtensions.AddHealth(services.AddHealthChecks(), Config, type);
             services.AddScoped<IAuthenticatedUserService, AuthenticatedUserService>();
         }
 
@@ -49,17 +56,21 @@ namespace WebApi
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseCORS();
             app.UseSwaggerExtension();
             app.UseErrorHandlingMiddleware();
-            //app.UseHealthChecks("/health");
+            app.UseHealthChecks("/health", new HealthCheckOptions
+            {
+                ResponseWriter =  UIResponseWriter.WriteHealthCheckUIResponse
+            });
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecksUI();
             });
         }
     }

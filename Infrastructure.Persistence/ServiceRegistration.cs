@@ -15,7 +15,6 @@ using SqlKata.Compilers;
 using SqlKata.Execution;
 using Application.Interfaces;
 using SqlKata;
-using MySql.Data.MySqlClient;
 
 namespace Infrastructure.Persistence
 {

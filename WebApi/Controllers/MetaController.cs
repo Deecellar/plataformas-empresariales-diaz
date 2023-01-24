@@ -13,7 +13,9 @@ namespace WebApi.Controllers
             var lastUpdate = System.IO.File.GetLastWriteTime(assembly.Location);
             var version = FileVersionInfo.GetVersionInfo(assembly.Location).ProductVersion;
 
-            return Ok($"Version: {version}, Last Updated: {lastUpdate}");
+            return Ok(System.Text.Json.JsonSerializer.Serialize(
+                new {Version = version, LastUpdate = lastUpdate}
+            ));
         }
     }
 }

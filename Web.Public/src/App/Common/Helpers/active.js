@@ -1,4 +1,4 @@
-import regexparam from 'regexparam'
+import * as regexparam from 'regexparam'
 import {loc} from 'svelte-spa-router'
 
 // List of nodes to update
@@ -46,7 +46,7 @@ loc.subscribe((value) => {
  * @param {ActiveOptions|string|RegExp} [opts] - Can be an object of type ActiveOptions, or a string (or regular expressions) representing ActiveOptions.path.
  * @returns {{destroy: function(): void}} Destroy function
  */
-export function active(node, opts) {
+export  function active(node, opts) {
     // Check options
     if (opts && (typeof opts == 'string' || (typeof opts == 'object' && opts instanceof RegExp))) {
         // Interpret strings and regular expressions as opts.path
@@ -81,7 +81,7 @@ export function active(node, opts) {
 
     // If path is not a regular expression already, make it
     const {pattern} = typeof opts.path == 'string' ?
-        regexparam(opts.path) :
+        regexparam.parse(opts.path) :
         {pattern: opts.path}
 
     // Add the node to the list

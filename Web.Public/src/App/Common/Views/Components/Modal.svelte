@@ -6,7 +6,8 @@
   const modalList : Array<{ addEventListener: (arg0: string,arg1: { (e: any): void; (e: any): void; }) => void; focus: () => void; removeEventListener: (arg0: string,arg1: { (e: any): void; (e: any): void; }) => void; }> = []
 </script>
 
-<script>import Backdrop from "./Backdrop.svelte";
+<script lang="ts">
+import Backdrop from "./Backdrop.svelte";
 import { _ } from "svelte-i18n";
 
     let isOpen = false;

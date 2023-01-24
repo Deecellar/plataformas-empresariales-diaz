@@ -1,8 +1,8 @@
 export enum ApiEndpoints {
-    AccountRegister = 'api/account/register',
-    AccountAuthenticate = 'api/account/authenticate',
-    AccountConfirmEmail = 'api/account/confirm-email',
-    AccountForgetPassword = 'api/account/forgot-password',
-    AccountResetPassword = 'api/account/reset-password',
+    AccountRegister = 'api/Account/register',
+    AccountAuthenticate = 'api/Account/authenticate',
+    AccountConfirmEmail = 'api/Account/confirm-email',
+    AccountForgetPassword = 'api/Account/forgot-password',
+    AccountResetPassword = 'api/Account/reset-password',
     ProductV1 = 'api/v1/product'
 }

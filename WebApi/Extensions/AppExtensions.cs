@@ -32,5 +32,6 @@ namespace WebApi.Extensions
         {
             app.UseCors();
         }
+
     }
 }

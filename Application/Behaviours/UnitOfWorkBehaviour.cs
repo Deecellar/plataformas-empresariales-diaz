@@ -7,7 +7,7 @@ using SqlKata;
 
 namespace Application.Behaviours
 {
-    public class UnitOfWorkBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+    public class UnitOfWorkBehaviour<TRequest, TResponse>  : IPipelineBehavior<TRequest, TResponse>  where TRequest : IRequest<TResponse>
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -15,7 +15,7 @@ namespace Application.Behaviours
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+        public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
             var response = await next();
 
@@ -23,5 +23,6 @@ namespace Application.Behaviours
 
             return response;
         }
+
     }
 }
