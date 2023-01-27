@@ -1,6 +1,6 @@
 import { AuthenticationParameters, AuthResponse, InteractionRequiredAuthError, UserAgentApplication } from 'msal';
-import { Config } from '../../../Config';
-import {CallMSGraph } from '../../../Helpers/GraphHelper';
+import { Config } from 'App';
+import {CallMSGraph } from 'App';
 
 export class MsalPopupService {
     userName: string;

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { KeyedCollection } from './../../../Helpers/KeyedDictionary';
+  import { KeyedCollection } from 'App';
 import { beforeUpdate, onMount, setContext } from "svelte";
 import { writable } from 'svelte/store';
 

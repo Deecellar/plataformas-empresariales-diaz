@@ -1,10 +1,10 @@
-import { ApiEndpoints } from "../../../ApiEndpoints"
-import { BaseService } from "../../BaseService"
-import type { ResponseModel } from '../../../Models/CommonResponse/Response.Model'
-import type { UserRegisterModel } from '../../../Models/Auth/User.Register.Model'
-import type { UserLoginModel } from '../../../Models/Auth/User.Login.Model'
-import type { UserForgotPasswordModel } from '../../../Models/Auth/User.ForgotPassword.Model'
-import type { UserResetPasswordModel } from '../../../Models/Auth/User.ResetPassword.Model'
+import { ApiEndpoints } from "App"
+import { BaseService } from "App"
+import type { ResponseModel } from 'App'
+import type { UserRegisterModel } from 'App'
+import type { UserLoginModel } from 'App'
+import type { UserForgotPasswordModel } from 'App'
+import type { UserResetPasswordModel } from 'App'
 
 // This uses an API different than the BaseService, so it doesn't extend it
 export class AuthService extends BaseService {

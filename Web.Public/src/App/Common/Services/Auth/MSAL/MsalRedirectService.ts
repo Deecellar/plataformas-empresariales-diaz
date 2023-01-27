@@ -1,6 +1,6 @@
 import { AuthenticationParameters, AuthError, AuthResponse, InteractionRequiredAuthError, UserAgentApplication } from 'msal';
-import { Config } from '../../../Config';
-import {CallMSGraph } from '../../../Helpers/GraphHelper';
+import { Config } from 'App';
+import {CallMSGraph } from 'App';
 
 export class MsalRedirectService {
     userName: string;

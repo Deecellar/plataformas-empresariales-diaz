@@ -1,5 +1,5 @@
 import { getLocaleFromNavigator, init, register } from 'svelte-i18n';
-import { Config } from '../Config';
+import { Config } from 'App';
 
 export async function RegisterLocalLangs(){
     register("en", () => import('../../../assets/en.json'));

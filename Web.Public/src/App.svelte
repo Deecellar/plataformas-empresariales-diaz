@@ -1,17 +1,17 @@
 <script lang="ts">
-  import Login from './App/Common/Views/Auth/Login.svelte';
-    import Register from './App/Common/Views/Auth/Register.svelte';
-    import Modal from './App/Common/Views/Components/Modal.svelte';
+  import Login from 'AppViews/Auth/Login.svelte';
+    import Register from 'AppViews/Auth//Register.svelte';
+    import Modal from 'AppViews/Components/Modal.svelte';
 import svelteLogo from './assets/svelte.svg'
-  import Counter from './lib/Counter.svelte'
+  import Counter from 'Views/Counter.svelte'
 
-  import { RegisterLocalLangs } from './App/Common/Helpers/LocalizationHelper';
+  import { RegisterLocalLangs } from 'App';
   import Router from 'svelte-spa-router';
   import type { RouteDefinition } from 'svelte-spa-router';
   import {link} from 'svelte-spa-router';
-	import { Config } from './App/Common/Config';
+	import { Config } from 'App';
   import { isLoading, locale, locales, _, init } from 'svelte-i18n';
-    import { active } from './App/Common/Helpers/active';
+    import { active } from 'App';
 
 
 init({

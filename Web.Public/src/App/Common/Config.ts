@@ -1,9 +1,10 @@
 import * as msal from 'msal'; // This is for msal (azure)
 import type { RouteDefinition } from 'svelte-spa-router';
-import ForgotPassword from "./Views/Auth/ForgotPassword.svelte";
-import Register from "./Views/Auth/Register.svelte";
-import Home from "../../lib/Home.svelte";
-import NotFound from "../../lib/NotFound.svelte";
+import ForgotPassword from "AppViews/Auth/ForgotPassword.svelte";
+import Register from "AppViews/Auth/Register.svelte";
+import Home from "Views/Home.svelte";
+import NotFound from "Views/NotFound.svelte";
+import Product from 'Views/Product.svelte';
 export class Config {
     public static ApiURl: string = (import.meta.env.MODE === 'development' ? 'http://localhost:5000/' : '0.0.0.0');
 
@@ -55,7 +56,7 @@ export class Config {
     // Routing Start 
     public static Routes: RouteDefinition = {
         '/': Home,
-
+        '/product': Product,
         '/forgot-password/': ForgotPassword,
         '/register/': Register,
         '*': NotFound

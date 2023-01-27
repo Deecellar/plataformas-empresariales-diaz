@@ -1,7 +1,7 @@
-import { Config } from '../Config';
-import type { UserModel } from '../Models/Auth/User.Model';
-import type { ResponseModel } from '../Models/CommonResponse/Response.Model';
-import type { PagedResponseModel } from '../Models/CommonResponse/PagedResponse.Model';
+import { Config } from 'App';
+import type { UserModel } from 'App';
+import type { ResponseModel } from 'App';
+import type { PagedResponseModel } from 'App';
 export abstract class BaseService {
     public headers : Headers;
     public ApiRoot = Config.ApiURl;

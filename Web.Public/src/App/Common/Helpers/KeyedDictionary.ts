@@ -1,4 +1,4 @@
-import { IKeyedCollection } from "./IKeyedCollection";
+import type { IKeyedCollection } from "./IKeyedCollection";
 
 export class KeyedCollection<T1 extends string | number,T2> implements IKeyedCollection<T1,T2> {
     private items: Record<T1,T2>;

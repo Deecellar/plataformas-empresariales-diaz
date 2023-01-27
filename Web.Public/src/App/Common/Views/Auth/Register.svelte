@@ -1,7 +1,7 @@
 <script lang="ts">
 
-    import { AuthService } from "../../Services/Auth/Custom/AuthService";
-import { UserRegisterModel } from "../../Models/Auth/User.Register.Model";
+    import { AuthService } from "App";
+import { UserRegisterModel } from "App";
 import {link} from 'svelte-spa-router';
 import { _ } from "svelte-i18n";
 

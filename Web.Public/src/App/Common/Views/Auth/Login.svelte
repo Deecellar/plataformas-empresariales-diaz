@@ -1,7 +1,7 @@
 <script lang="ts">
 
-import { UserLoginModel } from "../../Models/Auth/User.Login.Model"
-import { AuthService } from "../../Services/Auth/Custom/AuthService";
+import { UserLoginModel } from "App"
+import { AuthService } from "App";
 import {link} from 'svelte-spa-router'
 import { _ } from "svelte-i18n";
     let login = new UserLoginModel();

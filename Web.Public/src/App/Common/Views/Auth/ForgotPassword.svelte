@@ -1,7 +1,7 @@
 <script lang="ts">
 
-    import { AuthService } from "../../Services/Auth/Custom/AuthService";
-import { UserForgotPasswordModel } from "../../Models/Auth/User.ForgotPassword.Model";
+    import { AuthService } from "App";
+import { UserForgotPasswordModel } from "App";
 import { _ } from "svelte-i18n";
         let forgot = new UserForgotPasswordModel();
         let authService = new AuthService();

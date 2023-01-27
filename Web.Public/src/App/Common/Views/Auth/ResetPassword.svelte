@@ -1,8 +1,8 @@
 <script lang="ts">
     import { parse,ParsedQs } from 'qs';
     import { querystring } from 'svelte-spa-router';
-    import { AuthService } from "../../Services/Auth/Custom/AuthService";
-import { UserResetPasswordModel } from "../../Models/Auth/User.ResetPassword.Model";
+    import { AuthService } from "App";
+import { UserResetPasswordModel } from "App";
 import { _ } from 'svelte-i18n';
         let reset = new UserResetPasswordModel();
         let authService = new AuthService();

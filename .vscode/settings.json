@@ -1,4 +1,17 @@
 {
     "msbuildProjectTools.nuget.includePreRelease": true,
-    "cSpell.enabled": false
+    "cSpell.enabled": false,
+    "exportall.config.folderListener": [
+        "/Web.Public/src/App",
+        "/Web.Public/src/App/Common/Enums",
+        "/Web.Public/src/App/Common/Helpers",
+        "/Web.Public/src/App/Common/Models",
+        "/Web.Public/src/App/Common/Services",
+        "/Web.Public/src/App/Common/Services/Auth",
+        "/Web.Public/src/App/Common/Views",
+        "/Web.Public/src/App/Common",
+        "/Web.Public/src/App/Filters/Products",
+        "/Web.Public/src/App/Models",
+        "/Web.Public/src/App/Service"
+    ]
 }
